@@ -1,4 +1,5 @@
 import "./App.css";
+import GamePath from "../components/GamePath";
 
 function App() {
   return (

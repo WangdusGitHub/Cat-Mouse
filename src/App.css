@@ -39,9 +39,6 @@
 
 .dot:not(.center) {
   --angle: calc(var(--i) * 72deg); /* 360deg / 5 dots = 72deg */
-  transform: translate(-50%, -50%) rotate(var(--angle)) translate(150px) rotate(calc(-1 * var(--angle)));
-}
-
-.dot.center {
-  /* Center dot specific styles */
+  transform: translate(-50%, -50%) rotate(var(--angle)) translate(150px)
+    rotate(calc(-1 * var(--angle)));
 }
