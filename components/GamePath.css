@@ -1,122 +1,65 @@
-
 #circle {
     height: 90%;
     aspect-ratio: 1/1;
-
     border-radius: 50%;
-    /* background-color: red; */
-
     border: 3px solid black;
-    /* box-shadow: 0 0 10px 1px black; */
-
     position: relative;
-
-    /* animation: rotate 10s linear infinite; */
-
     z-index: 0;
-}
-
-#cat, #mouse {
-    height: 100%;
-    aspect-ratio: 1/1;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    z-index: 0;
-
-    transition:0.5s ease-in-out;
-}
-
-#cat img, #mouse img {
-    height: 4rem;
-
-    position: relative;
-
-    z-index: 1;
-}
-#cat img{
-    --top: -10%;
-    top: var(--top);
-    left: 50%;
-
-    transform: translate(-50%, 0);
-}
-#mouse img{
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-}
-
-#cat {
-    /* animation: revolve 10s linear infinite; */
-}
-@keyframes revolve {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-#cat img {
-    /* animation: rotate 10s linear infinite; */
-}
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(-360deg);
-    }
 }
 
 #vertices {
     position: absolute;
     height: 100%;
     aspect-ratio: 1/1;
-    z-index: -1;
 }
+
 #vertices div {
     position: absolute;
-
-    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
     aspect-ratio: 1/1;
-
-    background-color: black;
-    border-radius: 50%;
+    /* background-color: blue; */
 }
+
+#vertex0, #vertex1, #vertex2, #vertex3, #vertex4, #vertex5 {
+    z-index: 1;
+}
+
 #vertex0 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 #vertex1 {
-    top: -4%;
+    top: -5%;
     left: 50%;
     transform: translate(-50%, 0);
 }
+
 #vertex2 {
     top: 40%;
-    left: -3%;
+    left: -4%;
     transform: translate(0, -50%);
 }
+
 #vertex3 {
     top: 40%;
-    right: -3%;
+    right: -4%;
     transform: translate(0, -50%);
 }
+
 #vertex4 {
-    bottom: 6%;
-    left: 20%;
+    bottom: 4.5%;
+    left: 20.5%;
     transform: translate(-50%, 0);
-}#vertex5 {
-    bottom: 6%;
-    right: 20%;
+}
+
+#vertex5 {
+    bottom: 4.5%;
+    right: 20.5%;
     transform: translate(50%, 0);
 }
 
@@ -125,18 +68,13 @@
     top: 0;
     width: 100%;
     height: 100%;
-
-    /* background-color: black; */
-    
     z-index: -1;
 }
 
 #edges div {
     position: absolute;
-
     width: 3px;
     height: 50%;
-
     background-color: black;
 }
 
@@ -145,67 +83,54 @@
     left: 50%;
     transform: translate(-50%, 0);
 }
+
 #edge2 {
     top: 45%;
     left: 25%;
     transform: translate(0, -50%) rotate(101deg);
 }
+
 #edge3 {
     top: 45%;
     right: 25%;
     transform: translate(0, -50%) rotate(-101deg);
 }
+
 #edge4 {
     bottom: 5%;
     left: 35%;
     transform: translate(-50%, 0) rotate(216deg);
 }
+
 #edge5 {
     bottom: 5%;
     right: 35%;
     transform: translate(50%, 0) rotate(-216deg);
 }
 
-#btns {
+.btn {
     height: 100%;
-    aspect-ratio: 1/1;
-    z-index: 10;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#btns button {
-    position: absolute;
-
-    height: 1.5em;
+.btn:after {
+    content: "";
+    position: relative;
+    height: 55%;
     aspect-ratio: 1/1;
-
-    background-color: red;
+    background-color: black;
     border-radius: 50%;
 }
-#btn0 {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-#btn1 {
-    top: -4%;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-#btn2 {
-    top: 40%;
-    left: -3%;
-    transform: translate(0, -50%);
-}
-#btn3 {
-    top: 40%;
-    right: -3%;
-    transform: translate(0, -50%);
-}
-#btn4 {
-    bottom: 6%;
-    left: 20%;
-    transform: translate(-50%, 0);
-}#btn5 {
-    bottom: 6%;
-    right: 20%;
-    transform: translate(50%, 0);
+
+#cat, #mouse {
+    height: 4rem;
+    position: absolute;
+    z-index: 2;
 }
